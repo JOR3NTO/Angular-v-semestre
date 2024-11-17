@@ -1,0 +1,55 @@
+<div class="container-fluid max-width-900">
+
+  <!-- Cards dentro de un carousel para el listado de los programas -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button
+        *ngFor="let group of groupProgramas(programas, 3); let i = index"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0"
+        [attr.aria-current]="i === 0 ? 'true' : null"
+        [attr.aria-label]="'Slide ' + (i + 1)"
+        class="rounded-circle"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Dividir los programas en grupos de 3 para mostrar como cards -->
+      <ng-container *ngFor="let group of groupProgramas(programas, 3); let i = index">
+        <div class="carousel-item" [class.active]="i === 0">
+          <div class="row row-cols-1 row-cols-md-3 g-3" id="cards">
+            <div class="col" *ngFor="let programa of group">
+              <div class="card h-100">
+                <img [src]="programa.imagenPrograma" class="card-img-top" [alt]="programa.nombrePrograma || 'Imagen de programa'">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <h5 class="card-title">{{ programa.nombrePrograma }}</h5>
+                    <p class="card-text">
+                      {{ programa.descripcionPrograma }}
+                    </p>
+                  </div>
+                  <!-- Contenedor del botón -->
+                  <div class="d-flex justify-content-start mt-auto">
+                    <button class="btn btn-danger btn-sm" (click)="borrarPrograma(programa)">
+                      Borrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
