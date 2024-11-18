@@ -1,0 +1,22 @@
+#carouselExampleIndicators {
+  padding-bottom: 50px; /* Espacio adicional para los indicadores */
+}
+
+
+.carousel-indicators button {
+  background-color: rgba(0,168,88,255);
+  width: 12px;
+  height: 12px;
+  border: none;
+}
+
+#cards {
+  margin: 0 auto;
+  width: 50%;
+  height: 60%;
+}
+
+.card {
+  background-color: rgba(0,168,88,255);
+  color: white;
+}
