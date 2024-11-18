@@ -5,11 +5,13 @@ import {ProgramasRoutingModule} from './programas-routing.module';
 import {ListarProgramasComponent} from './listar-programas/listar-programas.component';
 import {ProgramaService} from './service/programa.service';
 import {ReactiveFormsModule} from "@angular/forms";
+import { CrearProgramaComponent } from './crear-programa/crear-programa.component';
 
 
 @NgModule({
   declarations: [
-    ListarProgramasComponent
+    ListarProgramasComponent,
+    CrearProgramaComponent
   ],
   imports: [
     CommonModule,
