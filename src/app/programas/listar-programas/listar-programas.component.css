@@ -10,13 +10,31 @@
   border: none;
 }
 
+.banner {
+  margin: auto;
+  width: 65%;
+  display: block;
+}
+
 #cards {
   margin: 0 auto;
-  width: 50%;
-  height: 60%;
+  width: 65%;
+  height: 50%;
 }
 
 .card {
   background-color: rgba(0,168,88,255);
   color: white;
+}
+
+button {
+  border: black solid 1px;
+}
+
+button:hover {
+  border: aliceblue solid 1px;
+}
+
+.crudbtns {
+  gap: 10px;
 }
