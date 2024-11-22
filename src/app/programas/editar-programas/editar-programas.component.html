@@ -18,30 +18,53 @@
 </div>
 <section class="container my-2 w-50 text-light p-2">
   <form class="row g-3 p-3">
-    <div class="col-md-4">
-      <label for="validationDefault01" class="form-label">Nombre del programa</label>
-      <input type="text" class="form-control" id="validationDefault01" placeholder="Medicina" required>
-    </div>
-    <div class="col-md-4">
-      <label for="validationDefault02" class="form-label">SNIES</label>
-      <input type="text" class="form-control" id="validationDefault02" placeholder="1234" required>
-    </div>
-    <div class="col-md-4">
-      <label for="validationDefaultUsername" class="form-label">ID Facultad</label>
-      <div class="input-group">
-        <span class="input-group-text" id="inputGroupPrepend2"></span>
-        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="1234"  aria-describedby="inputGroupPrepend2" required>
+      <!-- Columna para los campos del formulario -->
+      <div class="col-md-6">
+          <ul>
+            <div class="col-md-6">
+              <label for="validationDefault01" class="form-label">Nombre del programa</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="Medicina" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label">SNIES</label>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="1234" required>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationDefaultUsername" class="form-label">ID Facultad</label>
+              <input type="text" class="form-control" id="validationDefaultUsername" placeholder="1234" required>
+            </div>
+
+
+
+          </ul>
+
+        </div>
       </div>
-    </div>
-    <div class="col-12">
-      <label for="inputEmail4" class="form-label">Descripción</label>
-      <input type="text" class="form-control" placeholder="Programa que forma medicos" id="inputEmail4">
-    </div>
+
+      <!-- Columna para el profile-box -->
+      <div class="col-md-4 text-center">
+        <div class="profile-box">
+          <img id="profileImage" src="default-avatar.jpg" alt="Foto de perfil" class="profile-pic">
+          <label for="fileInput" class="upload-btn">Cambiar Foto</label>
+          <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+        </div>
+      </div>
 
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Crear</button>
+      <label for="inputDescription" class="form-label">Descripción</label>
+      <textarea class="form-control" id="inputDescription" rows="3" placeholder="Programa que forma médicos"></textarea>
     </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+
+
   </form>
+
+
 </section>
 </body>
 </html>
+
