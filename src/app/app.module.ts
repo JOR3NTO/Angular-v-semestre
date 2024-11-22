@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes} from '@angular/router';
 import { ListarProgramasComponent} from './programas/listar-programas/listar-programas.component';
@@ -14,10 +15,17 @@ const rutas: Routes =[
   {path: '', loadChildren: () => import('./programas/programas.module').then(m => m.ProgramasModule)},
 ]
 
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { FacultadesComponent } from './facultades/facultades.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    FacultadesComponent
   ],
   imports: [
     BrowserModule,
