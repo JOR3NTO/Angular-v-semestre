@@ -43,6 +43,9 @@
 
 button {
   border: black solid 1px;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 button:hover {

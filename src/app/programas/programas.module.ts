@@ -6,12 +6,14 @@ import {ListarProgramasComponent} from './listar-programas/listar-programas.comp
 import {ProgramaService} from './service/programa.service';
 import {ReactiveFormsModule} from "@angular/forms";
 import { CrearProgramaComponent } from './crear-programa/crear-programa.component';
+import {EditarProgramasComponent} from './editar-programas/editar-programas.component';
 
 
 @NgModule({
   declarations: [
     ListarProgramasComponent,
-    CrearProgramaComponent
+    CrearProgramaComponent,
+    EditarProgramasComponent
   ],
   imports: [
     CommonModule,

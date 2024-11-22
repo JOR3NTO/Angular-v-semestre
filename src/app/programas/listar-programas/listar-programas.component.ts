@@ -40,7 +40,7 @@ export class ListarProgramasComponent implements OnInit {
   onSelected(programa: Programa) {
     this.programaSelect = programa;
     this.selected=true;
-    // console.log(this.cursoSelected); //Imprime en la consola del navegador el programa seleccionado
+    // console.log(this.programaSelected); //Imprime en la consola del navegador el programa seleccionado
     this.routerPath.navigate(['/editar/' + this.programaSelect.idPrograma]); //Redirecciona a la ruta /editar/:id
   }
 
@@ -76,7 +76,7 @@ export class ListarProgramasComponent implements OnInit {
    * Metodo que redirecciona a la ruta /crear
    */
   crearPrograma() {
-    this.routerPath.navigate(['/programa/crear']);
+    this.routerPath.navigate(['/crear/']);
   }
 
 

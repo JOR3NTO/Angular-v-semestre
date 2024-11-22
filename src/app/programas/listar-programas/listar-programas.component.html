@@ -1,5 +1,8 @@
 <div class="container-fluid max-width-900">
   <img src="https://www.uceva.edu.co/wp-content/uploads/2023/03/BannerFacultadIngenierias.jpg" class="banner d-flex">
+  <button class="btn btn-danger btn-sm" (click)="crearPrograma()">
+    Crear
+  </button>
   <!-- Cards dentro de un carousel para el listado de los programas -->
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
@@ -39,7 +42,7 @@
                       <button class="btn btn-danger btn-sm" (click)="borrarPrograma(programa)">
                         Borrar
                       </button>
-                      <button class="btn btn-toolbar btn-dark">
+                      <button class="btn btn-toolbar btn-dark" (click)="onSelected(programa)">
                         Editar
                       </button>
                     </div>
