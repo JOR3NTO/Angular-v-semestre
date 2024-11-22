@@ -1,0 +1,8 @@
+{
+  "/api/programa-service": {
+    "target": "http://54.157.163.154:8080",
+    "secure": false,
+    "changeOrigin": true
+  }
+
+}

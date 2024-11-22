@@ -76,7 +76,7 @@ export class ListarProgramasComponent implements OnInit {
    * Metodo que redirecciona a la ruta /crear
    */
   crearPrograma() {
-    this.routerPath.navigate(['/crear']);
+    this.routerPath.navigate(['/programa/crear']);
   }
 
 
