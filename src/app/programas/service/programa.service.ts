@@ -8,7 +8,7 @@ import {map, Observable} from "rxjs";
 })
 
 export class ProgramaService {
-  private baseUrl = '/api/programa-service';
+  private baseUrl = 'https://gist.githubusercontent.com';
   constructor(private httpClient: HttpClient) { }
 
   /**
@@ -16,7 +16,7 @@ export class ProgramaService {
    * @returns Observable<Programa[]> Lista de programas
    */
   getProgramas(): Observable<Programa[]> {
-    return this.httpClient.get<Programa[]>(`${this.baseUrl}/programas`)
+    return this.httpClient.get<Programa[]>(`${this.baseUrl}/BrosMan1414/38bc5b1c7bc25296e1fdfa24c2b729d7/raw/edf9314ff7e3e60f334fe4397f7e474fa9761ff7/gistfile1.txt`)
       .pipe(
         map((result:any)=>{
           //console.log(result._embedded.programaes);
